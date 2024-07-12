@@ -1,0 +1,25 @@
+html {
+      font-family: "Lato", sans-serif;
+
+      height: 100vh;
+      background: linear-gradient(white, darkgray);
+}
+
+.userCardF,
+.userCardM,
+.userCardN {
+      max-width: 25rem;
+      margin: 5rem auto;
+      border-radius: 0.5rem;
+      text-align: center;
+      background-color: white;
+}
+.userCardF {
+      box-shadow: 0 0.5rem 0.5rem #a53168;
+}
+.userCardM {
+      box-shadow: 0 0.5rem 0.5rem #0a0985;
+}
+.userCardN {
+      box-shadow: 0 0.5rem 0.5rem #414141;
+}

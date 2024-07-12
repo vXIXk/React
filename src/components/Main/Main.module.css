@@ -1,0 +1,71 @@
+.cardContent {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 0.5rem;
+      padding: 3.5rem 2rem;
+      min-height: 11rem;
+}
+
+.countBox {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.25rem;
+}
+.countLabel {
+      color: darkgray;
+      font-weight: bold;
+}
+.count {
+      font-size: 1.5rem;
+}
+
+.likeBtn,
+.clickedLikeBtn,
+.followBtn {
+      position: absolute;
+      border-style: none;
+      width: fit-content;
+      color: white;
+}
+
+.likeBtn,
+.clickedLikeBtn {
+      background: none;
+      bottom: 300%;
+      right: 5%;
+      font-size: 1.1rem;
+}
+.likeBtn:hover,
+.clickedLikeBtn:hover {
+      color: #ffff8d;
+}
+.likeBtn:active,
+.clickedLikeBtn:active {
+      color: #fff455;
+}
+.clickedLikeBtn {
+      color: #ffff08;
+}
+
+.followBtn {
+      bottom: 83%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      border-radius: 50%;
+      padding: 1rem 1.5rem;
+
+      font-size: 1.75rem;
+      font-weight: bold;
+      background: linear-gradient(#f66746, #f02c7a);
+}
+.followBtn:hover {
+      color: #ffb58e;
+}
+.followBtn:active {
+      color: #f89b84;
+}

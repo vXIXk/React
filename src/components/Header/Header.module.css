@@ -1,0 +1,30 @@
+.cardHeader {
+      position: relative;
+      border-radius: inherit;
+}
+
+.pfp {
+      width: 100%;
+      max-height: 25rem;
+      object-fit: cover;
+      border-top-right-radius: inherit;
+      border-top-left-radius: inherit;
+      opacity: 90%;
+}
+
+.shownName,
+.userName {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      color: white;
+}
+.shownName {
+      top: 75%;
+      font-weight: bolder;
+      font-size: 1.1rem;
+}
+.userName {
+      top: 81%;
+}
