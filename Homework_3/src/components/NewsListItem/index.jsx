@@ -2,18 +2,17 @@ import classNames from "classnames";
 import styles from "./NewsListItem.module.css";
 
 function NewsListItem({
-    item: { id, title, headerBgSrc, category, body: content, date, isSelected },
+    item: { title, headerBgSrc, category, body: content, date, isSelected },
     itemIndex,
     selectItem,
+    deleteItem,
 }) {
     const itemClassName = classNames(styles.newsItem, {
         [styles.selected]: isSelected,
     });
 
-    const selectHandler = () => selectItem(itemIndex);
-
     return (
-        <li key={id} onClick={selectHandler} className={itemClassName}>
+        <li className={itemClassName} onClick={() => selectItem(itemIndex)}>
             <article className={styles.newsCard}>
                 <header className={styles.newsHeader}>
                     <div
@@ -32,11 +31,11 @@ function NewsListItem({
                     <p className={styles.date}>{date}</p>
                 </footer>
             </article>
-            <button className={styles.delBtn}>
+            <button
+                className={styles.delBtn}
+                onClickCapture={() => deleteItem(itemIndex)}
+            >
                 <i className="fa-solid fa-ban"></i>
-            </button>
-            <button className={styles.likeBtn}>
-                <i className="fa-solid fa-heart"></i>
             </button>
         </li>
     );

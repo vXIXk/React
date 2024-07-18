@@ -60,8 +60,7 @@ body,
     opacity: 99%;
 }
 
-.delBtn,
-.likeBtn {
+.delBtn {
     position: absolute;
     border-style: none;
     color: #777777;
@@ -71,20 +70,9 @@ body,
     box-shadow: 0 0 3px gray;
     bottom: 90.5%;
 }
-
 .delBtn {
     left: 1%;
 }
 .delBtn:active {
     color: darkred;
-}
-
-.likeBtn {
-    right: 1%;
-}
-.likeBtn:active {
-    color: #fff1b3;
-}
-.liked {
-    color: #ffd700;
 }

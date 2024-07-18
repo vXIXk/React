@@ -58,10 +58,15 @@ const NEWS = [
 
 function NewsList() {
     const [news, setNews] = useState(NEWS);
+    let newsCopy = [...news];
 
     const selectItem = index => {
-        const newsCopy = [...news];
         newsCopy[index].isSelected = !newsCopy[index].isSelected;
+        setNews(newsCopy);
+    };
+
+    const deleteItem = index => {
+        newsCopy.splice(index, 1);
         setNews(newsCopy);
     };
 
@@ -70,9 +75,11 @@ function NewsList() {
             {news.map((i, index) => {
                 return (
                     <NewsListItem
+                        key={i.id}
                         item={i}
                         itemIndex={index}
                         selectItem={selectItem}
+                        deleteItem={deleteItem}
                     />
                 );
             })}
