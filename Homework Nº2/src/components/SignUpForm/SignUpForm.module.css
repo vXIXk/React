@@ -1,0 +1,119 @@
+html,
+* {
+    font-family: "Open Sans", sans-serif;
+
+    --green: #7cd9a0;
+}
+body {
+    padding: 1rem;
+    background-color: #f8f9fd;
+}
+
+.formBox {
+    background-color: white;
+    max-width: 25rem;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    border-radius: 7px;
+    box-shadow: 0 0.5rem 1rem lightgray;
+}
+
+.formBoxHeader,
+.form,
+.formLabel,
+.passwordBox {
+    display: flex;
+    flex-direction: column;
+}
+.formBoxHeader,
+.form {
+    gap: 1rem;
+}
+.formBoxHeader {
+    align-items: center;
+}
+.formBoxMain {
+    padding: 2rem 0;
+}
+.passwordBox {
+    position: relative;
+}
+
+.icon {
+    position: relative;
+    min-width: 5rem;
+    min-height: 5rem;
+    border-radius: 50%;
+
+    background-color: var(--green);
+    color: white;
+    font-size: 2rem;
+}
+.icon > * {
+    position: absolute;
+    top: 30%;
+    left: 33%;
+}
+
+.labelCaption,
+.signInOption {
+    font-size: small;
+}
+.formHeading {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+.labelCaption {
+    color: var(--green);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.formInput {
+    margin: 0.5rem 0;
+    padding: 1rem 0.5rem;
+    border: thin solid lightgray;
+    border-radius: 5px;
+}
+.inputValid {
+    background-color: rgba(124, 217, 160, 0.5);
+}
+.inputInvalid {
+    background-color: #f7adac;
+}
+
+.submitBtn {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+
+    background-color: var(--green);
+    color: white;
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+.submitBtn:hover {
+    background-color: rgba(124, 217, 160, 0.9);
+}
+.submitBtn:disabled {
+    background-color: lightgray;
+    color: inherit;
+}
+
+.signInOption {
+    padding: 0.5rem 0;
+}
+.signInOption > a {
+    text-decoration: none;
+    color: var(--green);
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.hideCheck {
+    position: absolute;
+    bottom: 36%;
+    right: 5%;
+}
