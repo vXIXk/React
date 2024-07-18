@@ -67,7 +67,7 @@ function SignUpForm() {
                 <h1 className={styles.formHeading}>Create your account</h1>
             </header>
             <main className={styles.formBoxMain}>
-                <form className={styles.form}>
+                <form className={styles.form} onSubmit={submitHandler}>
                     <label className={styles.formLabel}>
                         <span className={styles.labelCaption}>Username</span>
                         <input
@@ -152,7 +152,6 @@ function SignUpForm() {
                         className={styles.submitBtn}
                         type="submit"
                         disabled={isUnSubmittable()}
-                        onSubmit={submitHandler}
                     >
                         Sign up
                     </button>

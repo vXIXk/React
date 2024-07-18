@@ -1,0 +1,90 @@
+html {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+body,
+.newsHeader,
+.newsMain,
+.newsFooter {
+    display: flex;
+    line-height: 1.5;
+    padding: 2rem;
+}
+
+.newsItem {
+    position: relative;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 5px gray;
+}
+
+.newsHeader {
+    position: relative;
+    min-height: 20vh;
+    justify-content: center;
+    align-items: center;
+}
+.title {
+    font-weight: bolder;
+    font-size: 2rem;
+}
+.bgImg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    opacity: 40%;
+}
+
+.newsMain {
+    flex-direction: column;
+    justify-content: center;
+}
+.category {
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+}
+.category,
+.date {
+    color: gray;
+}
+.newsFooter {
+    justify-content: flex-end;
+}
+
+.selected {
+    background-color: #fff1b3;
+    opacity: 99%;
+}
+
+.delBtn,
+.likeBtn {
+    position: absolute;
+    border-style: none;
+    color: #777777;
+    background-color: transparent;
+    padding: 7px;
+    border-radius: 50%;
+    box-shadow: 0 0 3px gray;
+    bottom: 90.5%;
+}
+
+.delBtn {
+    left: 1%;
+}
+.delBtn:active {
+    color: darkred;
+}
+
+.likeBtn {
+    right: 1%;
+}
+.likeBtn:active {
+    color: #fff1b3;
+}
+.liked {
+    color: #ffd700;
+}
