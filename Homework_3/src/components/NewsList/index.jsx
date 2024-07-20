@@ -58,14 +58,15 @@ const NEWS = [
 
 function NewsList() {
     const [news, setNews] = useState(NEWS);
-    let newsCopy = [...news];
 
     const selectItem = index => {
+        const newsCopy = [...news];
         newsCopy[index].isSelected = !newsCopy[index].isSelected;
         setNews(newsCopy);
     };
 
     const deleteItem = index => {
+        const newsCopy = [...news];
         newsCopy.splice(index, 1);
         setNews(newsCopy);
     };
