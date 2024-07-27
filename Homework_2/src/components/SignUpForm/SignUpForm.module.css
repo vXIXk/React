@@ -1,14 +1,3 @@
-html,
-* {
-    font-family: "Open Sans", sans-serif;
-
-    --green: #7cd9a0;
-}
-body {
-    padding: 1rem;
-    background-color: #f8f9fd;
-}
-
 .formBox {
     background-color: white;
     max-width: 25rem;
@@ -103,7 +92,8 @@ body {
 }
 
 .signInOption {
-    padding: 0.5rem 0;
+    display: block;
+    padding: 2rem 0.25rem;
 }
 .signInOption > a {
     text-decoration: none;

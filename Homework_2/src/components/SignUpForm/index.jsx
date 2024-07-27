@@ -155,10 +155,10 @@ function SignUpForm() {
                     >
                         Sign up
                     </button>
-                    <span className={styles.signInOption}>
-                        I'm already a member! <a href="#">Sign in</a>
-                    </span>
                 </form>
+                <span className={styles.signInOption}>
+                    I'm already a member! <a href="#">Sign in</a>
+                </span>
             </main>
         </section>
     );
