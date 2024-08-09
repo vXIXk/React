@@ -1,0 +1,49 @@
+@import './../../../assets/common/templates'
+@import './../../../assets/common/vars'
+      
+.controlPanel
+      @include flex-box(column, normal, stretch, 1.5rem)
+      min-width: 30%
+      @media screen and (max-width: 900px)
+            width: 90%
+      background-color: $bronze
+      border-radius: 5px
+      padding: 1.5rem
+
+.optBox
+      @include flex-box(row, space-between, stretch, 1.5rem)
+      font-size: small
+.label
+      width: 40%
+.labelCaption
+      display: block
+      white-space: nowrap
+      @media screen and (max-width: 1005px)
+            white-space: wrap
+      @media screen and (max-width: 900px)
+            white-space: nowrap
+      @media screen and (max-width: 390px)
+            white-space: wrap
+
+.controlledEl, .arrow
+      border: none
+      text-decoration: none
+      background-color: $cream   
+.controlledEl
+      width: 100%
+      height: 1.5rem
+      margin-top: 0.5rem
+      padding: 0.25rem
+.numberInput
+      padding-left: 0.25rem
+
+.arrowBox
+      align-self: center
+.pageNum
+      margin: 0 0.5rem
+.arrow
+      padding: 0.25rem 0.5rem
+      &:hover
+            opacity: 80%
+      &:active
+            opacity: 60%

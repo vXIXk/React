@@ -1,0 +1,40 @@
+@import './../../../assets/common/templates'
+@import './../../../assets/common/vars'
+
+.controlPanel
+      width: 100%
+      @include flex-box(column, center, center, 1.5rem)
+      margin-top: 1rem
+
+.arrowBox
+      width: 100%
+      @include flex-box(row, space-around, stretch, 3rem)
+.arrow
+      border: none
+      background-color: inherit
+      font-weight: bold
+      font-size: 4rem
+      &:hover
+            opacity: 60%
+      &:active
+            opacity: 45%
+
+.secsInput
+      border: none
+      border-radius: 5px
+      margin-left: 0.75rem
+      padding: 0.25rem
+      padding-left: 0.5rem
+      background-color: rgba($turquoise, 0.5)
+
+.pauseBtn
+      border: none
+      border-radius: 15px
+      padding: 1.5rem 10%
+      background-color: rgba($turquoise, 0.25)
+      text-transform: uppercase
+      letter-spacing: 1px
+      &:hover
+            opacity: 75%
+      &:active
+            opacity: 55%

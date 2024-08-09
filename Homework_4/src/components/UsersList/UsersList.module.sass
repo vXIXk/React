@@ -1,0 +1,14 @@
+@import './../../assets/common/templates'
+
+.contentBox
+      @include flex-box(row, space-between, flex-start, 5rem)
+      padding: 2.5rem 1rem 3.5rem
+      @media screen and (max-width: 900px)
+            @include flex-box(column, center, center, 3rem)
+
+.usersList
+      @include flex-box(column, center, center, 2rem)
+      min-width: 60%
+      margin-right: 2.5rem
+      @media screen and (max-width: 900px)
+            margin: 0 auto

@@ -1,0 +1,67 @@
+@import './../../../assets/common/templates'
+@import './../../../assets/common/vars'
+      
+.slide
+      position: relative
+      color: white
+      box-shadow: 0 0 1rem $light-black
+.slideImg
+      object-fit: cover
+      object-position: center
+      width: 100%
+      height: 100%
+      border-radius: inherit
+
+.currentSlide
+      width: 65rem
+      height: 35rem
+      border-radius: 25px
+
+.prevSlide, .nextSlide
+      width: 10rem
+      height: 25rem
+      opacity: 40%
+      .slideCaption
+            display: none
+.prevSlide
+      border-top-left-radius: 20px
+      border-bottom-left-radius: 20px
+.nextSlide
+      border-top-right-radius: 20px
+      border-bottom-right-radius: 20px
+
+.slideCaption
+      position: absolute
+      right: 0
+      bottom: 0
+      left: 0
+      @include flex-box(column, flex-end, stretch, 1.5rem)
+      padding: 2rem
+      @media screen and (max-width: 500px)
+            padding: 1.5rem
+      background-color: rgba($turquoise, 0.5)
+      border-bottom-left-radius: inherit
+      border-bottom-right-radius: inherit
+
+      &:hover
+            .slideDesc
+                  display: block
+            @media screen and (max-width: 281px)
+                  padding: 1.25rem
+            @media screen and (max-width: 247px)
+                  top: 0
+                  border-radius: inherit
+
+.slideTitle
+      margin: 0 auto
+      text-align: center
+      font-size: large
+      font-weight: bolder
+      @media screen and (max-width: 500px)
+            font-size: medium
+.slideDesc
+      display: none
+      @media screen and (max-width: 500px)
+            font-size: small
+      @media screen and (max-width: 268px)
+            overflow: scroll

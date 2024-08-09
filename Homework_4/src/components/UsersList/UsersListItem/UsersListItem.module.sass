@@ -1,0 +1,60 @@
+@import './../../../assets/common/templates'
+@import './../../../assets/common/vars'
+
+.usersListItem
+      width: 100%
+.userBox
+      @include flex-box(row, space-between, stretch, 5rem)
+      @media screen and (max-width: 390px)
+            gap: 4rem
+      @media screen and (max-width: 375px)
+            gap: 3.5rem
+      @media screen and (max-width: 340px)
+            @include flex-box(column, normal, center, 5rem)
+      border-radius: 10px
+      box-shadow: 0 0 1rem $bronze
+      background-color: $cream
+      padding: 1.75rem
+      @media screen and (max-width: 340px)
+            padding: 1.75rem 3.5rem
+
+.userHeader, .userMain
+      max-width: 7rem
+      flex-wrap: wrap
+      padding: 0.25rem
+.userHeader
+      @include flex-box(column, center, center, 1.5rem)
+.userMain
+      @include flex-box(column, center, flex-start, 0.75rem)
+      @media screen and (max-width: 340px)
+            align-items: center
+
+.userName
+      font-size: large
+      font-weight: bold
+      text-align: center
+.pfp
+      max-height: 7rem
+      object-fit: cover
+      border-radius: 50%
+      border: 3px solid
+.pfpM
+      border-color: $mustard-yellow
+.pfpF
+      border-color: $cayenne-red
+
+.userGender
+      text-transform: capitalize
+
+.flagIcon
+      width: 3.5rem
+      &:hover
+            opacity: 60%
+      &:hover + *
+            visibility: visible
+            opacity: 1
+.userCountry
+      visibility: hidden
+      opacity: 0
+      transition: visibility 0s, opacity 0.25s linear
+      font-weight: 300
