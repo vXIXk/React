@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navigation from "./components/Navigation";
-// import FormPage from "./../../pages/FormPage"
+import FormPage from ".//pages/FormPage";
 import UsersPage from "./pages/UsersPage";
 import SliderPage from "./pages/SliderPage";
 import Error from "./components/Error";
@@ -12,7 +12,7 @@ export default function App() {
             <Navigation />
             <Routes>
                 <Route>
-                    {/* <Route path="/form" element={<FormPage/>}/> */}
+                    <Route path="/form" element={<FormPage />} />
                     <Route path="/" element={<UsersPage />} />
                     <Route path="/slider" element={<SliderPage />} />
                     <Route path="*" element={<Error />} />
@@ -20,6 +20,4 @@ export default function App() {
             </Routes>
         </Router>
     );
-
-    // <SliderPage />;
 }

@@ -11,9 +11,11 @@ export default function Navigation() {
     return (
         <nav>
             <ul className={styles.navBox}>
-                {/* <li className={styles.linkWrapper}>
-                    <NavLink to="/form">Login form</NavLink>
-                </li> */}
+                <li className={styles.linkWrapper}>
+                    <NavLink to="/form" className={linkClassName}>
+                        Login form
+                    </NavLink>
+                </li>
                 <li className={styles.linkWrapper}>
                     <NavLink to="/" className={linkClassName}>
                         List of users
