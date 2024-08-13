@@ -9,6 +9,9 @@
 .arrowBox
       width: 100%
       @include flex-box(row, space-around, stretch, 3rem)
+.arrow, .pauseBtn
+      &:hover
+            cursor: pointer
 .arrow
       border: none
       background-color: inherit
@@ -16,7 +19,6 @@
       font-size: 4rem
       &:hover
             opacity: 60%
-            cursor: pointer
       &:active
             opacity: 45%
 

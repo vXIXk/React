@@ -1,4 +1,3 @@
-import classNames from "classnames";
 import styles from "./UsersControlPanel.module.sass";
 
 export default function UsersControlPanel({
@@ -35,10 +34,7 @@ export default function UsersControlPanel({
                     </span>
                     <input
                         type="number"
-                        className={classNames(
-                            styles.controlledEl,
-                            styles.numberInput,
-                        )}
+                        className={`${styles.controlledEl} ${styles.numberInput}`}
                         min="5"
                         max="50"
                         value={inputResults}

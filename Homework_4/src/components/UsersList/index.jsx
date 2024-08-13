@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import classNames from "classnames";
 import { PacmanLoader } from "react-spinners";
 import { loadUsers } from "../../api";
 import Error from "../Error";
@@ -60,11 +59,7 @@ export default function UsersList() {
     }, [results, gender, page]);
 
     return (
-        <article
-            className={classNames({
-                [styles.contentBox]: !error,
-            })}
-        >
+        <article className={error ? {} : styles.contentBox}>
             {isFetching && <PacmanLoader size={"1rem"} speedMultiplier={1} />}
             {error && <Error />}
 
@@ -92,3 +87,5 @@ export default function UsersList() {
         </article>
     );
 }
+
+//* При перезавантаженні список іноді підлагує, видаючи бажану поведінку (підвантаження з localstorage) через раз.
