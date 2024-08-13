@@ -1,12 +1,4 @@
-import {
-    BrowserRouter as Router,
-    Route,
-    Routes,
-    Link,
-    NavLink,
-    Outlet,
-    useNavigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navigation from "./components/Navigation";
 // import FormPage from "./../../pages/FormPage"
 import UsersPage from "./pages/UsersPage";
@@ -20,7 +12,7 @@ export default function App() {
             <Navigation />
             <Routes>
                 <Route>
-                    {/* <Route to="/form" element={<FormPage/>}/> */}
+                    {/* <Route path="/form" element={<FormPage/>}/> */}
                     <Route path="/" element={<UsersPage />} />
                     <Route path="/slider" element={<SliderPage />} />
                     <Route path="*" element={<Error />} />

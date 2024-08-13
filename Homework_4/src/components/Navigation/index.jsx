@@ -1,8 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
 import classNames from "classnames";
-// import FormPage from "./../../pages/FormPage"
-import SliderPage from "../../pages/SliderPage";
-import UsersPage from "../../pages/UsersPage";
 import styles from "./Navigation.module.sass";
 
 export default function Navigation() {
@@ -24,7 +21,7 @@ export default function Navigation() {
                 </li>
                 <li className={styles.linkWrapper}>
                     <NavLink to="/slider" className={linkClassName}>
-                        Cosmos pics
+                        Cosmos pictures
                     </NavLink>
                 </li>
                 <Outlet />
