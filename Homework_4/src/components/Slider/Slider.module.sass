@@ -2,8 +2,9 @@
 @import './../../assets/common/vars'
 
 .sliderBox
-      padding: 3.5rem 1rem 3.5rem
+      min-height: 100vh
+      @extend %padding
       background-color: $cream
 
 .slidesBox
-      @include flex-box(row, center, center, 0) 
+      @include flex-box(row, center, center, 0)

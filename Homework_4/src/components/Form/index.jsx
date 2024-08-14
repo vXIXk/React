@@ -1,8 +1,15 @@
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import { REGISTER_SCHEMA } from "../../assets/utils/yupSchemas";
-import { classes } from "./LoginForm";
-import Input from "./FormsAssets/Input";
-import styles from "./FormsAssets/Forms.module.sass";
+import { Formik, Form } from "formik";
+import { REGISTER_SCHEMA } from "./../../assets/utils/yupSchemas";
+import Input from "./Input";
+import styles from "./Form.module.sass";
+
+const classes = {
+    label: styles.formLabel,
+    input: styles.input,
+    valid: styles.valid,
+    invalid: styles.invalid,
+    error: styles.error,
+};
 
 export default function RegisterForm() {
     const initValues = {
@@ -12,6 +19,7 @@ export default function RegisterForm() {
         email: "",
         password: "",
         passwordConfirmation: "",
+        isAgreed: false,
     };
     const handleSubmit = (value, formikBag) => {
         formikBag.resetForm();
@@ -25,21 +33,22 @@ export default function RegisterForm() {
         >
             {({ dirty, isValid }) => {
                 return (
-                    <section className={styles.formBox}>
+                    <article className={styles.formBox}>
                         <header className={styles.formBoxHeader}>
                             <h1
-                                className={`${styles.formH1} ${styles.registerFormH1}`}
+                                className={styles.formH1}
                             >
                                 Create an account
                             </h1>
-                            <p className={styles.registerFormIntro}>
+                            <p className={styles.formIntro}>
                                 We always keep your name and email address
                                 private.
                             </p>
                         </header>
                         <main className={styles.formBoxMain}>
                             <Form className={styles.form}>
-                                <Input
+                                <div className={styles.labelPairWrapper}>
+                                    <Input
                                     classes={classes}
                                     type="text"
                                     name="firstName"
@@ -51,6 +60,8 @@ export default function RegisterForm() {
                                     name="lastName"
                                     placeholder="Doe"
                                 />
+                                </div>
+                                <div className={styles.labelPairWrapper}>
                                 <Input
                                     classes={classes}
                                     type="text"
@@ -63,7 +74,9 @@ export default function RegisterForm() {
                                     name="email"
                                     placeholder="qwerty@email.tld"
                                 />
-                                <Input
+                                </div>
+                                <div className={styles.labelPairWrapper}>
+                                    <Input
                                     classes={classes}
                                     type="password"
                                     name="password"
@@ -74,17 +87,32 @@ export default function RegisterForm() {
                                     type="password"
                                     name="passwordConfirmation"
                                     placeholder="Confirm your password"
-                                />
+                                /></div>
+                                <label
+                                    className={`${styles.formLabel} ${styles.radioLabel}`}
+                                >
+                                    <input
+                                        type="checkbox"
+                                        name="isAgreed"
+                                        required
+                                    />
+                                    <span>
+                                        By checking this, you agree to our
+                                        <a className={styles.link} href="#">
+                                            Terms Of Service.
+                                        </a>
+                                    </span>
+                                </label>
                                 <button
-                                    className={`${styles.submitBtn} ${styles.registerSubmitBtn}`}
+                                    className={styles.submitBtn}
                                     type="submit"
                                     disabled={!(dirty && isValid)}
                                 >
-                                    Login
+                                    Create account
                                 </button>
                             </Form>
                         </main>
-                    </section>
+                    </article>
                 );
             }}
         </Formik>

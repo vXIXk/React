@@ -1,0 +1,77 @@
+@import './../../assets/common/_templates'
+@import './../../assets/common/_vars'
+
+.formBox
+      min-height: 100vh
+      @include flex-box(column, normal, center, 1.5rem)
+      @extend %padding
+      background-color: $sky-blue
+      color: white
+.formBoxHeader, .formBoxMain
+      text-align: center
+      padding: 0 1.5rem
+
+.formH1
+      font-size: 2.25rem
+      text-transform: uppercase
+      letter-spacing: 1px
+.formH1, .formIntro
+      margin-bottom: 0.5rem
+      font-weight: bolder
+
+.form
+      @include flex-box(column, center, center, 2.25rem)
+
+.labelPairWrapper
+      @include flex-box(row, center, center, 1.5rem)
+      @media screen and (max-width: 710px)
+            @include flex-box(column, normal, stretch, 2rem)
+
+.formLabel
+      position: relative
+
+.input
+      width: 17vw
+      @media screen and (max-width: 1200px)
+            width: 20vw
+      @media screen and (max-width: 990px)
+            width: 25vw
+      @media screen and (max-width: 710px)
+            width: 60vw
+      @media screen and (max-width: 500px)
+            width: 70vw
+      padding: 1rem 0.75rem
+      border: thin solid transparent
+.valid
+      border: thin solid $bright-turquoise
+.invalid, .error
+      border: thin solid red
+
+.error
+      position: absolute
+      top: 100%
+      border-top: none
+      left: 0
+      width: 100%
+      padding: 0.25rem
+      font-size: small
+      text-align: center
+
+.radioLabel
+      margin-top: 1rem
+.link
+      margin-left: 0.25rem
+      color: inherit
+      &:hover
+            color: #f7f7f7
+      
+.submitBtn
+      border: none
+      width: 100%
+      padding: 1.5rem
+      font-size: inherit
+      text-transform: capitalize
+      background-color: $bright-turquoise
+      color: inherit
+      &:disabled
+            opacity: 65%

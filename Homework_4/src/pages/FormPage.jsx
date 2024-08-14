@@ -1,5 +1,4 @@
-import LoginForm from "../components/Forms/LoginForm";
-import RegisterForm from "../components/Forms/RegisterForm";
+import RegisterForm from "./../components/Form";
 
 export default function FormPage() {
     return <RegisterForm />;
