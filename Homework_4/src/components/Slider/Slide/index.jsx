@@ -1,6 +1,7 @@
 import { Component } from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
+import { defCosmosImg } from "./../../../assets/constants";
 import styles from "./Slide.module.sass";
 
 export default class Slide extends Component {
@@ -32,6 +33,12 @@ export default class Slide extends Component {
     }
 }
 
+Slide.defaultProps = {
+    title: "Uh-oh! No article found!",
+    description:
+        "Our resource seems to be having an issue fetching an article for you. Please, do try again later.",
+    src: defCosmosImg,
+};
 Slide.propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
