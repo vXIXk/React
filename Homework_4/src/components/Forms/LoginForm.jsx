@@ -24,7 +24,7 @@ export default function LoginForm() {
             validationSchema={LOGIN_SCHEMA}
         >
             {({ dirty, isValid }) => (
-                <section className={styles.formBox}>
+                <article className={styles.formBox}>
                     <header className={styles.formBoxHeader}>
                         <h1
                             className={`${styles.formH1} ${styles.loginFormH1}`}
@@ -55,7 +55,7 @@ export default function LoginForm() {
                             </button>
                         </Form>
                     </main>
-                </section>
+                </article>
             )}
         </Formik>
     );

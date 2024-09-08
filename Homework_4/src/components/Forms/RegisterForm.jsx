@@ -12,6 +12,7 @@ export default function RegisterForm() {
         email: "",
         password: "",
         passwordConfirmation: "",
+        isAgreed: false,
     };
     const handleSubmit = (value, formikBag) => {
         formikBag.resetForm();
@@ -25,7 +26,7 @@ export default function RegisterForm() {
         >
             {({ dirty, isValid }) => {
                 return (
-                    <section className={styles.formBox}>
+                    <article className={styles.formBox}>
                         <header className={styles.formBoxHeader}>
                             <h1
                                 className={`${styles.formH1} ${styles.registerFormH1}`}
@@ -75,6 +76,21 @@ export default function RegisterForm() {
                                     name="passwordConfirmation"
                                     placeholder="Confirm your password"
                                 />
+                                <label
+                                    className={`${styles.formLabel} ${styles.radioLabel}`}
+                                >
+                                    <input
+                                        type="checkbox"
+                                        name="isAgreed"
+                                        required
+                                    />
+                                    <span className={styles.isAgreed}>
+                                        By checking this, you agree to our
+                                        <a className={styles.link} href="#">
+                                            Terms Of Service.
+                                        </a>
+                                    </span>
+                                </label>
                                 <button
                                     className={`${styles.submitBtn} ${styles.registerSubmitBtn}`}
                                     type="submit"
@@ -84,7 +100,7 @@ export default function RegisterForm() {
                                 </button>
                             </Form>
                         </main>
-                    </section>
+                    </article>
                 );
             }}
         </Formik>

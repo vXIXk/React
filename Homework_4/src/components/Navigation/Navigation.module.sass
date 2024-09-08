@@ -4,11 +4,14 @@
       width: 100%
 
 .navBox
+      position: absolute
       display: flex
       @media screen and (max-width: 300px)
             flex-direction: column
 .linkWrapper
       flex: 1 1 auto
+      display: flex
+      align-items: center
       background-color: $turquoise
       font-family: "Roboto Slab"
       text-transform: uppercase
@@ -16,8 +19,8 @@
 .navLink
       display: block
       text-decoration: none
-      padding: 1rem
       text-align: center
+      padding: 1rem
       background-color: inherit
       color: white
 

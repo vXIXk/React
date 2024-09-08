@@ -1,10 +1,11 @@
 @import './../../assets/common/templates'
+@import './../../assets/common/vars'
 
 .contentBox
       @include flex-box(row, space-between, flex-start, 5rem)
-      padding: 2.5rem 1rem 3.5rem
       @media screen and (max-width: 900px)
             @include flex-box(column, center, center, 3rem)
+      @extend %padding
 
 .usersList
       @include flex-box(column, center, center, 2rem)
