@@ -146,6 +146,8 @@ export const COSMOS_SLIDES = [
         src: "https://cdn.esahubble.org/archives/images/thumb700x/heic0702a.jpg",
     },
 ];
+export const defCosmosImg =
+    "https://www.ixbt.com/img/n1/news/2023/11/6/hubble_stock_large.jpg";
 
 export const errorImg =
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHg3n0f-DC-fald_TZLwviff_okfWFYP324g&s";

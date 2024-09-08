@@ -14,8 +14,6 @@ export default class Slider extends Component {
             isPaused: true,
         };
         this.timerId = null;
-        /* const { currentSlide } = this.state;
-           const { slides } = this.props; */ //* Не можу деструктуризувати тут, з якої причини ❓
     }
 
     get prevSlide() {
@@ -32,14 +30,14 @@ export default class Slider extends Component {
         const { currentSlide } = this.state;
         const { slides } = this.props;
         this.setState({
-            currentSlide: (currentSlide - 1 + slides.length) % slides.length,
+            currentSlide: this.prevSlide,
         });
     };
     goNextSlide = () => {
         const { currentSlide } = this.state;
         const { slides } = this.props;
         this.setState({
-            currentSlide: (currentSlide + 1) % slides.length,
+            currentSlide: this.nextSlide,
         });
     };
 
@@ -57,14 +55,13 @@ export default class Slider extends Component {
             delay !== prevState.delay ||
             isPaused !== prevState.isPaused
         ) {
-            if (!isPaused && !this.timerId) {
+            clearInterval(this.timerId);
+            this.timerId = null;
+
+            if (!isPaused) {
                 this.timerId = setInterval(() => {
                     this.goNextSlide();
                 }, this.state.delay * 1000);
-            }
-            if (isPaused) {
-                clearInterval(this.timerId);
-                this.timerId = null;
             }
         }
     }
@@ -100,6 +97,6 @@ Slider.propTypes = {
             title: PropTypes.string,
             description: PropTypes.string,
             src: PropTypes.string,
-        }),
+        })
     ).isRequired,
 };
