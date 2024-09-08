@@ -53,4 +53,5 @@ export const REGISTER_SCHEMA = yup.object({
         .string()
         .oneOf([yup.ref("password")])
         .required("This field is required."),
+    isAgreed: yup.boolean().oneOf([true], "").required(),
 });

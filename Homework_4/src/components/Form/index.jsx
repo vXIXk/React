@@ -1,4 +1,4 @@
-import { Formik, Form } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import { REGISTER_SCHEMA } from "./../../assets/utils/yupSchemas";
 import Input from "./Input";
 import styles from "./Form.module.sass";
@@ -88,11 +88,7 @@ export default function RegisterForm() {
                                 <label
                                     className={`${styles.formLabel} ${styles.radioLabel}`}
                                 >
-                                    <input
-                                        type="checkbox"
-                                        name="isAgreed"
-                                        required
-                                    />
+                                    <Field type="checkbox" name="isAgreed" />
                                     <span>
                                         By checking this, you agree to our
                                         <a className={styles.link} href="#">
