@@ -9,25 +9,27 @@ export default function Navigation() {
         });
 
     return (
-        <nav>
-            <ul className={styles.navBox}>
-                <li className={styles.linkWrapper}>
-                    <NavLink to="/form" className={linkClassName}>
-                        Login form
-                    </NavLink>
-                </li>
-                <li className={styles.linkWrapper}>
-                    <NavLink to="/" className={linkClassName}>
-                        List of users
-                    </NavLink>
-                </li>
-                <li className={styles.linkWrapper}>
-                    <NavLink to="/slider" className={linkClassName}>
-                        Cosmos pictures
-                    </NavLink>
-                </li>
-                <Outlet />
-            </ul>
-        </nav>
+        <>
+            <nav>
+                <ul className={styles.navBox}>
+                    <li className={styles.linkWrapper}>
+                        <NavLink to="/form" className={linkClassName}>
+                            Login form
+                        </NavLink>
+                    </li>
+                    <li className={styles.linkWrapper}>
+                        <NavLink to="/" className={linkClassName}>
+                            List of users
+                        </NavLink>
+                    </li>
+                    <li className={styles.linkWrapper}>
+                        <NavLink to="/slider" className={linkClassName}>
+                            Cosmos pictures
+                        </NavLink>
+                    </li>
+                </ul>
+            </nav>
+            <Outlet />
+        </>
     );
 }

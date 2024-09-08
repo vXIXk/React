@@ -8,12 +8,23 @@ import styles from "./assets/App.module.sass";
 
 export default function App() {
     return (
+        // <Router>
+        //     <Navigation />
+        //     <Routes>
+        //         <Route>
+        //             <Route path="/form" element={<FormPage />} />
+        //             <Route path="/" element={<UsersPage />} />
+        //             <Route path="/slider" element={<SliderPage />} />
+        //             <Route path="*" element={<Error />} />
+        //         </Route>
+        //     </Routes>
+        // </Router>
+
         <Router>
-            <Navigation />
             <Routes>
-                <Route>
+                <Route path="/" element={<Navigation />}>
                     <Route path="/form" element={<FormPage />} />
-                    <Route path="/" element={<UsersPage />} />
+                    <Route index element={<UsersPage />} />
                     <Route path="/slider" element={<SliderPage />} />
                     <Route path="*" element={<Error />} />
                 </Route>
